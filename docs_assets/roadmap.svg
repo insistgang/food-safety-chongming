@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+  <defs>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="stepShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="360" rx="16" fill="url(#roadGrad)" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="500" y="38" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    “食安崇明”平台对接随申办工程化落地推进阶段路径
+  </text>
+  <text x="500" y="60" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    从纯前端原型到政务准入的一站式实施甘特拆解（总估期约 5.5 周）
+  </text>
+
+  <!-- Connective Track -->
+  <path d="M 120 180 L 880 180" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="8,8"/>
+
+  <!-- Phase 1 -->
+  <g transform="translate(70, 95)">
+    <rect width="195" height="195" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#stepShadow)"/>
+    <rect x="0" y="0" width="195" height="32" rx="12" fill="#0284c7"/>
+    <text x="97" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">阶段一：后端与数据服务</text>
+
+    <text x="15" y="55" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" font-weight="bold" fill="#0369a1">周期：2.0 周</text>
+    <text x="15" y="75" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 替换 storage.ts 为标准 REST API</text>
+    <text x="15" y="93" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• MySQL 建表与 16 乡镇行级隔离</text>
+    <text x="15" y="111" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 接入政务私有云 OSS 证据防篡改</text>
+    <text x="15" y="129" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 家宴/吹哨核心防刷与防重放</text>
+
+    <rect x="15" y="150" width="165" height="28" rx="6" fill="#f0f9ff" stroke="#bae6fd"/>
+    <text x="97" y="168" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" font-weight="bold" fill="#0284c7" text-anchor="middle">交付：RESTful API / 数据持久化</text>
+  </g>
+
+  <!-- Phase 2 -->
+  <g transform="translate(295, 95)">
+    <rect width="195" height="195" rx="12" fill="#ffffff" stroke="#059669" stroke-width="1.5" filter="url(#stepShadow)"/>
+    <rect x="0" y="0" width="195" height="32" rx="12" fill="#059669"/>
+    <text x="97" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">阶段二：随申办多端适配</text>
+
+    <text x="15" y="55" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" font-weight="bold" fill="#047857">周期：1.5 周</text>
+    <text x="15" y="75" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 对接 open.eshimin.com 网关</text>
+    <text x="15" y="93" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• SM2/3/4 国密加解密与验签库</text>
+    <text x="15" y="111" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 前端封装 SuiShenBanBridge</text>
+    <text x="15" y="129" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 剥离政务监管后台至独立 PC 端</text>
+
+    <rect x="15" y="150" width="165" height="28" rx="6" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="97" y="168" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">交付：随申办联调成功 / 单点登录</text>
+  </g>
+
+  <!-- Phase 3 -->
+  <g transform="translate(520, 95)">
+    <rect width="195" height="195" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="1.5" filter="url(#stepShadow)"/>
+    <rect x="0" y="0" width="195" height="32" rx="12" fill="#d97706"/>
+    <text x="97" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">阶段三：安全渗透加固</text>
+
+    <text x="15" y="55" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" font-weight="bold" fill="#b45309">周期：1.0 周</text>
+    <text x="15" y="75" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 水平/垂直越权 (IDOR) 深度堵漏</text>
+    <text x="15" y="93" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• XSS / SQL 注入严格过滤加固</text>
+    <text x="15" y="111" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 敏感数据动态遮罩与日志合规</text>
+    <text x="15" y="129" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 委托第三方出具 CMA/CNAS 报告</text>
+
+    <rect x="15" y="150" width="165" height="28" rx="6" fill="#fffbeb" stroke="#fde68a"/>
+    <text x="97" y="168" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" font-weight="bold" fill="#b45309" text-anchor="middle">交付：第三方安全渗透性测试报告</text>
+  </g>
+
+  <!-- Phase 4 -->
+  <g transform="translate(745, 95)">
+    <rect width="195" height="195" rx="12" fill="#ffffff" stroke="#e11d48" stroke-width="1.5" filter="url(#stepShadow)"/>
+    <rect x="0" y="0" width="195" height="32" rx="12" fill="#e11d48"/>
+    <text x="97" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">阶段四：政务云上线准入</text>
+
+    <text x="15" y="55" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" font-weight="bold" fill="#be123c">周期：1.0 周</text>
+    <text x="15" y="75" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 审批 *.gov.cn 二级政务域名</text>
+    <text x="15" y="93" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 配置微信/支付宝业务域名校验</text>
+    <text x="15" y="111" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 全站强制开启 HTTPS / TLS 1.2+</text>
+    <text x="15" y="129" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#334155">• 随申办上架发布与市民/骑手推广</text>
+
+    <rect x="15" y="150" width="165" height="28" rx="6" fill="#fff1f2" stroke="#fecdd3"/>
+    <text x="97" y="168" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" font-weight="bold" fill="#e11d48" text-anchor="middle">交付：随申办正式全网上线运行</text>
+  </g>
+</svg>

@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="bffGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="govGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="560" rx="16" fill="url(#bgGrad)" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Title Header -->
+  <text x="500" y="42" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    “食安崇明”平台对接“随申办”三端体系目标技术架构
+  </text>
+  <text x="500" y="68" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+    涵盖 APP / 微信小程序 / 支付宝小程序 三端容器自适应、安全合规 BFF、国密身份鉴权与内网隔离
+  </text>
+
+  <!-- Row 1: Clients -->
+  <g transform="translate(60, 95)">
+    <!-- Container Box -->
+    <rect width="880" height="95" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="20" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#0369a1">
+      终端入口层：随申办多端容器（自适应桥接 SuiShenBanBridge）
+    </text>
+
+    <!-- Client 1 -->
+    <g transform="translate(30, 36)">
+      <rect width="250" height="46" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="125" y="20" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">随申办 APP 原生端</text>
+      <text x="125" y="36" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#0284c7" text-anchor="middle">SHGovJsBridge 原生免密授权</text>
+    </g>
+
+    <!-- Client 2 -->
+    <g transform="translate(315, 36)">
+      <rect width="250" height="46" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="125" y="20" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#047857" text-anchor="middle">微信小程序 Web-view</text>
+      <text x="125" y="36" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#059669" text-anchor="middle">JSSDK 容器回跳 + Ticket 授权</text>
+    </g>
+
+    <!-- Client 3 -->
+    <g transform="translate(600, 36)">
+      <rect width="250" height="46" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+      <text x="125" y="20" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#b45309" text-anchor="middle">支付宝小程序 Web-view</text>
+      <text x="125" y="36" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#d97706" text-anchor="middle">mPaaS 容器 postMessage 换码</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 1 -->
+  <path d="M 500 190 L 500 215" stroke="#64748b" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+  <polygon points="500,222 495,212 505,212" fill="#64748b"/>
+  <rect x="420" y="197" width="160" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="500" y="210" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#475569" text-anchor="middle">HTTPS / *.gov.cn 专属域名</text>
+
+  <!-- Row 2: BFF & API Gateway -->
+  <g transform="translate(60, 225)">
+    <rect width="880" height="120" rx="12" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="880" height="28" rx="12" fill="url(#bffGrad)"/>
+    <text x="20" y="19" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">
+      核心枢纽：食安共治业务 BFF 代理与安全网关（固定出口公网 IP）
+    </text>
+
+    <!-- BFF Module 1 -->
+    <g transform="translate(25, 42)">
+      <rect width="195" height="64" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="97" y="22" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">国密安全解密组件</text>
+      <text x="97" y="38" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b" text-anchor="middle">SM2 验签 / SM4 用户手机解密</text>
+      <text x="97" y="52" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#059669" text-anchor="middle">BouncyCastle / gm-crypto</text>
+    </g>
+
+    <!-- BFF Module 2 -->
+    <g transform="translate(240, 42)">
+      <rect width="195" height="64" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="97" y="22" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">身份映射与权限拦截</text>
+      <text x="97" y="38" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b" text-anchor="middle">市民自然人 ➔ 骑手/包厨资质绑定</text>
+      <text x="97" y="52" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#0284c7" text-anchor="middle">JWT 派发 / RBAC 鉴权</text>
+    </g>
+
+    <!-- BFF Module 3 -->
+    <g transform="translate(455, 42)">
+      <rect width="195" height="64" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="97" y="22" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">防刷与高危过滤引擎</text>
+      <text x="97" y="38" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b" text-anchor="middle">防重放签名 / 经纬度基站比对</text>
+      <text x="97" y="52" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#e11d48" text-anchor="middle">高危食材敏感词阻断过滤</text>
+    </g>
+
+    <!-- BFF Module 4 (To open.eshimin.com) -->
+    <g transform="translate(670, 42)">
+      <rect width="185" height="64" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+      <text x="92" y="22" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#9a3412" text-anchor="middle">随申办开放平台对接</text>
+      <text x="92" y="38" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#c2410c" text-anchor="middle">IP 白名单出网鉴权</text>
+      <text x="92" y="52" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#ea580c" text-anchor="middle">open.eshimin.com</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrows 2 -->
+  <path d="M 280 345 L 280 380" stroke="#059669" stroke-width="2" fill="none"/>
+  <polygon points="280,387 275,377 285,377" fill="#059669"/>
+
+  <path d="M 720 345 L 720 380" stroke="#0284c7" stroke-width="2" fill="none"/>
+  <polygon points="720,387 715,377 725,377" fill="#0284c7"/>
+
+  <!-- Row 3: Bottom Systems (Split architecture) -->
+  <!-- Left: Service Storage & Data -->
+  <g transform="translate(60, 390)">
+    <rect width="425" height="140" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="20" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#0f172a">
+      数据与持久化层（政务云合规部署）
+    </text>
+
+    <!-- Sub 1 -->
+    <g transform="translate(20, 36)">
+      <rect width="185" height="85" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="15" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#0f172a">业务数据库 (MySQL)</text>
+      <text x="15" y="42" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b">• 16个乡镇辖区行级数据隔离</text>
+      <text x="15" y="58" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b">• 聚餐台账 / 骑手积分审计流水</text>
+      <text x="15" y="74" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b">• 居民手机号与身份证密文存储</text>
+    </g>
+
+    <!-- Sub 2 -->
+    <g transform="translate(220, 36)">
+      <rect width="185" height="85" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="15" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#0f172a">政务私有 OSS / MinIO</text>
+      <text x="15" y="42" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b">• 证据照片防篡改哈希留存</text>
+      <text x="15" y="58" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b">• 文件 Magic Number 魔数强校验</text>
+      <text x="15" y="74" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#64748b">• 私有只读防跨站脚本盗链</text>
+    </g>
+  </g>
+
+  <!-- Right: Internal Gov PC Portal -->
+  <g transform="translate(515, 390)">
+    <rect width="425" height="140" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <text x="20" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#1e3a8a">
+      政务内网独立端（物理隔离，严禁挂随申办）
+    </text>
+
+    <!-- Sub 1 -->
+    <g transform="translate(20, 36)">
+      <rect width="185" height="85" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="15" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#1e40af">监管审核处置中心 (PC)</text>
+      <text x="15" y="42" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#3b82f6">• 乡镇审核员 / 区食药安办审批</text>
+      <text x="15" y="58" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#3b82f6">• 现场核查派单与扣分登记</text>
+      <text x="15" y="74" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#3b82f6">• 依托政务微信扫码免密鉴权</text>
+    </g>
+
+    <!-- Sub 2 -->
+    <g transform="translate(220, 36)">
+      <rect width="185" height="85" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="15" y="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#1e40af">崇明全域监管大屏 (PC)</text>
+      <text x="15" y="42" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#3b82f6">• 16个乡镇吹哨风险热力走势</text>
+      <text x="15" y="58" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#3b82f6">• 农村家宴聚餐安全报备驾驶舱</text>
+      <text x="15" y="74" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#3b82f6">• 数据导出与年度考核结算</text>
+    </g>
+  </g>
+</svg>

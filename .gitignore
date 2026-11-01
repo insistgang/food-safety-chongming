@@ -18,3 +18,10 @@ coverage/
 # System and log files
 .DS_Store
 *.log
+
+# 商务材料与交付文档：含对外报价数据，不进版本库
+*报价清单*
+*随申办接入技术难点与改造评估报告.md
+食安崇明接入随申办三端体系技术难点评估与改造方案报告.docx
+output_report.html
+insert_images.py

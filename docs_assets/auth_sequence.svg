@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480">
+  <defs>
+    <linearGradient id="seqBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="480" rx="16" fill="url(#seqBg)" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="500" y="38" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    随申办用户体系（OAuth2/SSO）与业务网关认证鉴权时序
+  </text>
+  <text x="500" y="60" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    前端不存 Secret · 国密安全解密 · 动态角色绑定 · 白名单出网
+  </text>
+
+  <!-- Lifeline Columns -->
+  <!-- Actor 1: 随申办用户 -->
+  <g transform="translate(100, 85)">
+    <rect x="-60" y="0" width="120" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+    <text x="0" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">随申办市民/骑手</text>
+    <line x1="0" y1="34" x2="0" y2="360" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Actor 2: 随申办端容器 -->
+  <g transform="translate(300, 85)">
+    <rect x="-70" y="0" width="140" height="34" rx="6" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1"/>
+    <text x="0" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#0369a1" text-anchor="middle">随申办 APP / 小程序</text>
+    <line x1="0" y1="34" x2="0" y2="360" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Actor 3: 本系统 H5 前端 -->
+  <g transform="translate(500, 85)">
+    <rect x="-65" y="0" width="130" height="34" rx="6" fill="#dcfce7" stroke="#4ade80" stroke-width="1"/>
+    <text x="0" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">食安崇明 H5 前端</text>
+    <line x1="0" y1="34" x2="0" y2="360" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Actor 4: 本系统业务 BFF -->
+  <g transform="translate(700, 85)">
+    <rect x="-65" y="0" width="130" height="34" rx="6" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+    <text x="0" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#b45309" text-anchor="middle">业务后端 BFF (固定IP)</text>
+    <line x1="0" y1="34" x2="0" y2="360" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Actor 5: 随申办开放平台 -->
+  <g transform="translate(900, 85)">
+    <rect x="-70" y="0" width="140" height="34" rx="6" fill="#fee2e2" stroke="#f87171" stroke-width="1"/>
+    <text x="0" y="21" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">随申办认证网关</text>
+    <line x1="0" y1="34" x2="0" y2="360" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Step 1: User click -->
+  <g transform="translate(0, 140)">
+    <line x1="100" y1="0" x2="300" y2="0" stroke="#0284c7" stroke-width="1.5"/>
+    <polygon points="300,0 292,-4 292,4" fill="#0284c7"/>
+    <text x="200" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#0284c7" text-anchor="middle">1. 点击进入"食安崇明"服务</text>
+  </g>
+
+  <!-- Step 2: JSBridge Auth -->
+  <g transform="translate(0, 175)">
+    <line x1="300" y1="0" x2="500" y2="0" stroke="#0284c7" stroke-width="1.5"/>
+    <polygon points="500,0 492,-4 492,4" fill="#0284c7"/>
+    <text x="400" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#0284c7" text-anchor="middle">2. 容器回调携带 Auth Code / Ticket</text>
+  </g>
+
+  <!-- Step 3: Forward code to BFF -->
+  <g transform="translate(0, 210)">
+    <line x1="500" y1="0" x2="700" y2="0" stroke="#15803d" stroke-width="1.5"/>
+    <polygon points="700,0 692,-4 692,4" fill="#15803d"/>
+    <text x="600" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#15803d" text-anchor="middle">3. 上报 code 到 BFF 网关 (/api/auth/login)</text>
+  </g>
+
+  <!-- Step 4: BFF to open.eshimin.com -->
+  <g transform="translate(0, 250)">
+    <line x1="700" y1="0" x2="900" y2="0" stroke="#b91c1c" stroke-width="1.5"/>
+    <polygon points="900,0 892,-4 892,4" fill="#b91c1c"/>
+    <text x="800" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#b91c1c" text-anchor="middle">4. 带 AppSecret 请求 Token (出网白名单校验)</text>
+  </g>
+
+  <!-- Step 5: Gateway response with encrypted data -->
+  <g transform="translate(0, 290)">
+    <line x1="900" y1="0" x2="700" y2="0" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <polygon points="700,0 708,-4 708,4" fill="#b91c1c"/>
+    <text x="800" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#b91c1c" text-anchor="middle">5. 返回加密公民标识 (国密 SM2/SM4 密文)</text>
+  </g>
+
+  <!-- Step 6: BFF Local Process -->
+  <g transform="translate(700, 325)">
+    <rect x="10" y="-12" width="165" height="26" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+    <text x="92" y="5" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="9" fill="#92400e" text-anchor="middle">6. 国密解密 + 匹配骑手档案 + 签发 JWT</text>
+  </g>
+
+  <!-- Step 7: Return session to H5 -->
+  <g transform="translate(0, 370)">
+    <line x1="700" y1="0" x2="500" y2="0" stroke="#15803d" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <polygon points="500,0 508,-4 508,4" fill="#15803d"/>
+    <text x="600" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#15803d" text-anchor="middle">7. 登录成功，下发系统业务 JWT Token 与脱敏昵称</text>
+  </g>
+
+  <!-- Step 8: Enter H5 App -->
+  <g transform="translate(0, 405)">
+    <line x1="500" y1="0" x2="100" y2="0" stroke="#0284c7" stroke-width="1.5"/>
+    <polygon points="100,0 108,-4 108,4" fill="#0284c7"/>
+    <text x="300" y="-7" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="10" fill="#0284c7" text-anchor="middle">8. 渲染食安吹哨/家宴申报页面，激活先锋哨兵专属特权</text>
+  </g>
+</svg>
